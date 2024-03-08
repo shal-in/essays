@@ -30,4 +30,4 @@ def dynamic(dynamic):
         return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=1111)
+    app.run(debug=True, port=9090)

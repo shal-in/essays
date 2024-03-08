@@ -1,0 +1,20 @@
+# Compiled python files
+*.pyc
+*.pyo
+*.pyd
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+*.pyd
+*.dll
+
+# Miscellaneous
+.DS_Store
+
+test.ipynb
