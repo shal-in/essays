@@ -1,0 +1,57 @@
+<!-- essay-template2.html -->
+{% extends 'website-template.html' %}
+
+<!-- Additional styling (to all essays)-->
+{% block styling %} 
+<style>
+    /* add additional styling here (in css form) */
+</style>
+
+{% block essay_styling %}{% endblock %}
+{% endblock %}
+
+
+<!-- Page title -->
+{% block page_title %}
+
+{% block essay_page_title %}{% endblock %}
+
+{% endblock %}
+
+
+<!-- Secondary container container content -->
+{% block secondary_container %}
+
+<div id="essay-title-container">
+    <div id="essay-title">{% block essay_title %}{% endblock %}</div> 
+    <div id="essay-title-secondary"><span id="essay-date">{% block essay_date %}{% endblock %}</span>&nbsp;from <span id="essay-location">{% block essay_location %}{% endblock %}</span></div>
+</div>
+
+<div class="secondary-divider"></div>
+
+<div id="navigation-button-container">
+    {% block navigation_1 %}{% endblock %}
+</div>
+
+<div class="secondary-divider"></div>
+
+<div id="essay-text-container" class="essay">
+    {% block essay_content %}{% endblock %}
+</div>
+    
+<div class="secondary-divider"></div>
+
+<div id="navigation-button-container">
+    {% block navigation_2 %}{% endblock %}
+</div>
+
+<div class="secondary-divider"></div>
+
+{% endblock %}
+
+
+
+<!-- Additional scripts -->
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/essay.js') }}"></script>
+{% endblock %}

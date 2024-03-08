@@ -1,0 +1,82 @@
+<!-- index.html -->
+{% extends 'website-template.html' %}
+
+
+<!-- Additional styling -->
+{% block styling %} 
+<style>
+    #essay-paragraph-2{
+        margin-bottom: 0px;
+    }
+
+    #essay-paragraph-3{
+        margin-bottom: 0px;
+    }
+</style>
+{% endblock %}
+
+
+<!-- Page title -->
+{% block page_title %}Example Page Title{% endblock %}
+
+
+<!-- Secondary container content -->
+{% block secondary_container %}
+
+<div id="essay-text-container" class="essay">
+    <p id="essay-paragraph-1" class="essay">
+        On this page, you'll find essays that I write weekly—sort of like a blog. In short, I aim to publish one short essay
+        on here every Sunday. The subject of the essay will vary, but hopefully it'll <i>at worst</i> be mildly interesting.
+        The aim of this project is purely personal; I just want to get better at writing. 
+    </p>
+
+    <p id="essay-paragraph-2" class="essay">
+        You can find more about this project in the <span class="hyperlink" id="intro-essay-hyperlink" link="/2024-02-01">first essay</span>.
+    </p>
+
+    <p id="essay-paragraph-3" class="essay">
+        All the essays are below, in reverse chronological order.
+    </p>
+
+    <div class="secondary-divider"></div>
+    
+
+
+    <div class="essay-link-container hyperlink" link="/2024-02-06" id="2024-02-06">
+        <div class="essay-link-container-date hyperlink">February 6th, 2024:</div>
+        <div class="essay-link-container-title">&nbsp;This is an example essay title 6</div>
+    </div>
+
+    <div class="essay-link-container hyperlink" link="/2024-02-05" id="2024-02-05">
+        <div class="essay-link-container-date hyperlink">February 5th, 2024:</div>
+        <div class="essay-link-container-title">&nbsp;This is an example essay title 5</div>
+    </div>
+
+    <div class="essay-link-container hyperlink" link="/2024-02-04" id="2024-02-04">
+        <div class="essay-link-container-date hyperlink">February 4th, 2024:</div>
+        <div class="essay-link-container-title">&nbsp;This is an example essay title 4</div>
+    </div>
+
+    <div class="essay-link-container hyperlink" link="/2024-02-03" id="2024-02-03">
+        <div class="essay-link-container-date hyperlink">February 3rd, 2024:</div>
+        <div class="essay-link-container-title">&nbsp;This is an example essay title 3</div>
+    </div>
+
+    <div class="essay-link-container hyperlink" link="/2024-02-02" id="2024-02-02">
+        <div class="essay-link-container-date hyperlink">February 2nd, 2024:</div>
+        <div class="essay-link-container-title">&nbsp;This is an example essay title 2</div>
+    </div>
+
+    <div class="essay-link-container hyperlink" link="/2024-02-01" id="2024-02-01">
+        <div class="essay-link-container-date hyperlink">February 1st, 2024:</div>
+        <div class="essay-link-container-title">&nbsp;This is an example essay title 1</div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+<!-- Additional js scripts if required -->
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

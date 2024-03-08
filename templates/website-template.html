@@ -1,0 +1,42 @@
+<!-- essay-template.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block styling %}{% endblock %}
+    <title>{% block page_title %}{% endblock %}</title>
+</head>
+<body>
+    <div id="themes-container">
+        <div id="themes-button">paint</div>
+    </div>
+
+    <div id="main-container">
+
+        <div id="header-container">
+            <h1 id="header-text">Essays by Shalin</span></h1>
+        </div>
+
+        <div class="primary-divider"></div>
+
+        <div id="secondary-container">
+
+        {% block secondary_container %}{% endblock %}
+
+        </div>
+        
+        <div class="primary-divider"></div>
+
+        <div id="footer-container">
+            &copy; Shalin Ahasan, 2024
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/universal.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

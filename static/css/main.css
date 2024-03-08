@@ -1,0 +1,145 @@
+*{
+    outline: 0;
+    padding: 0;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background-light: yellow;
+    --primary-light: black;
+    --secondary-light: orange;
+    
+    --background-dark: black;
+    --primary-dark: white;
+    --secondary-dark: green;
+
+    --background-main: var(--background-light);
+    --primary-main:var(--primary-light);
+    --secondary-main:var(--secondary-light)
+}
+
+
+body{
+    background-color: var(--background-main);
+    color: var(--primary-main);
+    text-align: center;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+#main-container{
+    display: inline-block; /* Ensure #main-container doesn't take up full width */
+    text-align: center; /* Reset text alignment for children */
+    width: 900px;
+}
+
+#header-container{
+    text-align: center;
+    user-select: none;
+    margin-top: -10px;
+}
+
+.primary-divider{
+    border-top: 1px solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.secondary-divider{
+    border-top: 1px solid black;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#secondary-container{
+    width: 65%
+}
+
+/* essay links (index)*/
+.essay-link-container {
+    margin-bottom: 8px;
+}
+
+.essay-link-container-date,
+.essay-link-container-title {
+    display: inline-block; /* Make children inline-block */
+}
+
+.hyperlink{
+    text-decoration: underline;
+}
+
+.hyperlink:hover{
+    color: var(--secondary-main);
+    cursor: pointer;
+}
+
+.essay{
+    margin-bottom: 15px;
+}
+
+/* essay title container */
+#essay-title-container{
+    font-size: 18px;
+    margin-bottom: 8px;
+    width: 70%;
+}
+
+#essay-title{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+
+
+/* navigation button container */
+#navigation-button-container{
+    display: flex;
+    text-decoration: underline;
+    margin: auto;
+    user-select: none;
+}
+
+
+.navigation-button:hover{
+    color: var(--secondary-main);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#previous-button{
+    margin-left: 0px;
+}
+
+#next-button{
+    margin-right: 0px;
+}
+
+
+
+
+
+/* essay text container */
+#essay-text-container{
+    /* border: 1px solid black; */
+    text-align: start;
+}
+
+/* themes container */
+#themes-container{
+    width: 100%;
+    text-align: end;
+}
+
+#themes-button{
+    margin-right: 10px;
+    text-decoration: underline;
+}
+
+#themes-button:hover{
+    color:var(--secondary-main);
+    text-decoration: underline;
+    cursor: pointer;
+}

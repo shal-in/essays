@@ -1,0 +1,44 @@
+<!-- essay (duplicate).html -->
+{% extends 'essay-template.html' %}
+
+
+<!-- Additional styling (specific to this essay) -->
+{% block essay_styling %}
+<style>
+    /* add additional styling here (in css form) */
+</style>
+{% endblock %}
+
+
+<!-- Page title -->
+{% block essay_page_title %}Essay Duplicate{% endblock %}
+
+
+<!-- Essay metadata -->
+{% block essay_title %}Essay Duplicate{% endblock %}  <!-- Title -->
+
+{% block essay_date %}Date, 2024{% endblock %} <!-- Date -->
+
+{% block essay_location %}Location{% endblock %} <!-- Location -->
+
+
+<!-- Essay content -->
+{% block essay_content %}
+<p id="essay-paragraph-0" class="essay">
+    Essay duplicate template.
+</p>
+{% endblock %}
+
+
+<!-- Navigation menu (1 and 2, should be the same) -->
+{% block navigation_1 %}
+<div id="previous-button" class="navigation-button">previous</div>
+<div id="index-button" class="navigation-button" link="/">index</div>
+<div id="next-button" class="navigation-button">next</div>
+{% endblock %}
+
+{% block navigation_2 %}
+<div id="previous-button" class="navigation-button">previous</div>
+<div id="index-button" class="navigation-button" link="/">index</div>
+<div id="next-button" class="navigation-button">next</div>
+{% endblock %}
