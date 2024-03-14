@@ -9,7 +9,7 @@ def index():
     # Pass some data to the template
     return render_template('index.html')
 
-    
+
 essay_dates = [
     '2024-02-01', '2024-02-02',
     '2024-02-03'
@@ -30,4 +30,4 @@ def dynamic(dynamic):
         return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=9090)
+    app.run(host='0.0.0.0', debug=True, port=9090)

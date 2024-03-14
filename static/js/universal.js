@@ -24,6 +24,7 @@ function themesBtnFunction() {
     root.style.setProperty('--background-main', `var(--background-${theme})`)
     root.style.setProperty('--primary-main', `var(--primary-${theme})`)
     root.style.setProperty('--secondary-main', `var(--secondary-${theme})`)
+    root.style.setProperty('--highlight-main', `var(--highlight-${theme})`)
 }
 
 

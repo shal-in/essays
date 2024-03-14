@@ -9,14 +9,17 @@
     --background-light: yellow;
     --primary-light: black;
     --secondary-light: orange;
+    --highlight-light: pink;
     
     --background-dark: black;
     --primary-dark: white;
     --secondary-dark: green;
+    --highlight-dark: purple;
 
     --background-main: var(--background-light);
     --primary-main:var(--primary-light);
-    --secondary-main:var(--secondary-light)
+    --secondary-main:var(--secondary-light);
+    --highlight-main:var(--highlight-light);
 }
 
 
@@ -28,10 +31,15 @@ body{
     line-height: 1.5;
 }
 
+/* Text highlight */
+::selection {
+    background-color: var(--highlight-main);
+}
+
 #main-container{
     display: inline-block; /* Ensure #main-container doesn't take up full width */
     text-align: center; /* Reset text alignment for children */
-    width: 900px;
+    width: 90%;
 }
 
 #header-container{
@@ -41,33 +49,49 @@ body{
 }
 
 .primary-divider{
-    border-top: 1px solid;
+    border-top: 1px solid var(--primary-main);
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .secondary-divider{
-    border-top: 1px solid black;
+    border-top: 1px solid var(--primary-main);
     margin-top: 8px;
     margin-bottom: 8px;
 }
 
 #secondary-container{
-    width: 65%
+    width: 70%;
 }
 
-/* essay links (index)*/
-.essay-link-container {
-    margin-bottom: 8px;
+/* essay-link-container (index) */
+#essay-link-container{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    user-select: none;
 }
 
-.essay-link-container-date,
-.essay-link-container-title {
-    display: inline-block; /* Make children inline-block */
+.essay-link{
+    margin-bottom: 10px;
+    width: auto;
+    margin-left: 1px;
 }
 
-.hyperlink{
+.essay-link:hover{
+    color: var(--secondary-main);
+    cursor: pointer;
+}
+
+.essay-link-date{
     text-decoration: underline;
+    font-weight: bold;
+}
+
+/* essay styling */
+.essay{
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
 .hyperlink:hover{
@@ -75,8 +99,20 @@ body{
     cursor: pointer;
 }
 
-.essay{
-    margin-bottom: 15px;
+.bold{
+    font-weight: bold;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+.italic{
+    font-style: italic;
 }
 
 /* essay title container */
@@ -90,8 +126,6 @@ body{
     font-size: 22px;
     font-weight: bold;
 }
-
-
 
 
 /* navigation button container */
@@ -128,13 +162,14 @@ body{
 }
 
 /* themes container */
-#themes-container{
-    width: 100%;
+#themes-container {
+    width: 95%;
     text-align: end;
+    user-select: none;
+    margin-bottom: 10px;
 }
 
 #themes-button{
-    margin-right: 10px;
     text-decoration: underline;
 }
 
@@ -142,4 +177,17 @@ body{
     color:var(--secondary-main);
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* Mobile styling */
+@media screen and (max-width: 600px) {
+    body{
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    #secondary-container{
+        width: 95%;
+    }
 }
